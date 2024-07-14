@@ -90,7 +90,7 @@ const Header = (props: Props) => {
 
                         {
                             NavLinkList.map((linkItem, index) => (
-                                <li>
+                                <li key={index}>
                                     <Link href={linkItem.href} className='text-text1 hover:text-brown transition-all duration-300 ease-linear' key={index}>{linkItem.name}</Link>
                                 </li>
                             ))
