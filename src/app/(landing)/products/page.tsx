@@ -19,7 +19,7 @@ import { Autoplay, FreeMode, Navigation, Pagination } from 'swiper/modules';
 type Props = {}
 
 
-const page = (props: Props) => {
+const Page = (props: Props) => {
 
   const [allProducts, setallProducts] = useState<any>([])
   const searchParams = useSearchParams()
@@ -70,4 +70,4 @@ const page = (props: Props) => {
   )
 }
 
-export default page
+export default Page

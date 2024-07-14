@@ -9,7 +9,7 @@ const FilterColorRadioCompo = ({ clearfilter }: { clearfilter: boolean }) => {
         useEffect(() => {
             clearfilter && setcolor("")
             console.log("color radio >> ", color)
-        })
+        },[clearfilter, color])
 
     return (
         <CustomRadio title='Colors' name='color' radioList={ColorList} value={color} setValue={setcolor}/>

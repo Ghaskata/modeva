@@ -34,7 +34,7 @@ const HeroSection = (props: Props) => {
         console.log("category >>> ", category)
 
         changeVisibility()
-    })
+    },[pathname, searchParams, changeVisibility])
 
     return (
         <div className='slider relative w-screen h-[calc("50%")]'>

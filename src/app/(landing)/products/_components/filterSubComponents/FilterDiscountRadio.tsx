@@ -10,7 +10,7 @@ const FilterDiscountRadio = ({ clearfilter }: { clearfilter: boolean }) => {
     useEffect(() => {
         clearfilter && setdiscount("")
         console.log("discount radio >> ", discount)
-    })
+    },[clearfilter, discount])
 
 
     return (

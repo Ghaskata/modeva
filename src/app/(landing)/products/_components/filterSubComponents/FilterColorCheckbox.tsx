@@ -9,7 +9,7 @@ const FilterColorCheckbox = ({ clearfilter }: { clearfilter: boolean }) => {
     useEffect(() => {
         clearfilter && setColorCheckedList([])
         console.log("color selectedList  >> ", ColorCheckedList)
-    })
+    },[clearfilter, ColorCheckedList])
 
     return (
         <CustomCheckbox title='Color checkbox' checkboxList={ColorList} selectedList={ColorCheckedList} setselectedList={setColorCheckedList} />

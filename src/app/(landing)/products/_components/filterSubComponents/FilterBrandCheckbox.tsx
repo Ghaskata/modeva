@@ -10,7 +10,7 @@ const FilterBrandCheckbox = ({ clearfilter }: { clearfilter: boolean }) => {
     useEffect(() => {
         clearfilter && setBrandCheckedList([])
         console.log("Brand selectedList  >> ", BrandCheckedList) 
-    })
+    },[clearfilter, BrandCheckedList])
     return (
         <CustomCheckbox title='Brand' checkboxList={brandList} selectedList={BrandCheckedList} setselectedList={setBrandCheckedList} />
     ) 
