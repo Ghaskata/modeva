@@ -40,7 +40,7 @@ const ProductListComponent: FC<props> = ({ productList }) => {
                 <div className='sm:flex justify-center items-center gap-2 hidden'>
                     {
                         Array.from({ length: totalPages }).map((_, i) => (
-                            <button onClick={() => setpage(i + 1)}><Button variant={"outline"} className={`${page === i + 1 ? "bg-black text-white hover:bg-black hover:text-white" : "hover:bg-secoundary"} border-none`}>{i + 1}</Button></button>
+                            <Button variant={"outline"} onClick={() => setpage(i + 1)} key={i} className={`${page === i + 1 ? "bg-black text-white hover:bg-black hover:text-white" : "hover:bg-secoundary"} border-none`}>{i + 1}</Button>
                         ))
                     }
                 </div>

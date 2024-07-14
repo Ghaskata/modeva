@@ -50,7 +50,7 @@ const CustomCheckbox: FC<CustomCheckboxProps> = ({ selectedList, setselectedList
         console.log("search >>>> ", Search)
         const a = checkboxList.filter((item) => item.name.toLowerCase().includes(Search.toLowerCase()))
         console.log(".......", a)
-    }, [Search])
+    }, [Search,checkboxList])
 
     return (
         <div className={cn(`list-group p-5 font-popins`, className)}>
