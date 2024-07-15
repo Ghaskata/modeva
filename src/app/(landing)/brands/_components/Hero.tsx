@@ -56,7 +56,7 @@ const Hero = (props: Props) => {
             </div>
             <div className='absolute start-0 top-0 h-full w-full  z-20'>
                 <div className="container mx-auto flex flex-col gap-5 justify-center items-center h-full">
-                    <h2 className='text-text1 text-36 md:text-52 text-center'>All Category Of Product's</h2>
+                    <h2 className='text-text1 text-36 md:text-52 text-center'>All Category Of Product&apos;s</h2>
                     <Button className='flex justify-center items-center gap-3 hover:bg-black transition-all duration-500 ease-out' variant={"brown"} size={"md"}>See More </Button>
                 </div>
             </div>

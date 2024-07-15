@@ -7,7 +7,7 @@ import { NavLinkList } from '@/app/data/staticData'
 import { ChevronDown, ChevronUp, Menu, Search, ShoppingCart, User2Icon } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname, useSearchParams } from 'next/navigation'
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 
 type Props = {}
 
@@ -21,7 +21,8 @@ const Header = (props: Props) => {
     const pathname = usePathname()
     const searchParams = useSearchParams()
 
-    let verticalScrollPx = 0
+    // let verticalScrollPx = 0
+    const verticalScrollPx = useRef(0);
 
     useEffect(() => {
         setopenCatalog(false)
@@ -35,19 +36,16 @@ const Header = (props: Props) => {
         }
     }, [pathname])
     useEffect(() => {
-        verticalScrollPx = window.scrollY;
+        verticalScrollPx.current = window.scrollY;
     })
     useEffect(() => {
-
         window.scrollTo(0, 0);
-
-
         const handleScroll = () => {
-            const verticalScrollPx = window.scrollY;
+            verticalScrollPx.current = window.scrollY;
             const header = document.getElementsByClassName("header")
 
             // console.log(verticalScrollPx)
-            if (verticalScrollPx < 300) {
+            if (verticalScrollPx.current < 300) {
                 header[0].classList.replace("bg-black", "bg-transparent")
                 header[0].classList.replace("h-[90px]", "h-[120px]")
             } else {

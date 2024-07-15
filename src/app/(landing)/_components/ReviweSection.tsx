@@ -52,8 +52,8 @@ const ReviweSection: FC<DefaultPageProps> = () => {
           className="h-full w-full my-5 lg:my-10"
         >
           {
-            arr.map(() => (
-              <SwiperSlide><ReviewCard /></SwiperSlide>
+            arr.map((review, index) => (
+              <SwiperSlide key={index}><ReviewCard /></SwiperSlide>
             ))
           }
         </Swiper>

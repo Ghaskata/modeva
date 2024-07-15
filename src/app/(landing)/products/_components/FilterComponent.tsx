@@ -19,7 +19,7 @@ const FilterComponent = () => {
     },[clearfilter])
 
     return (
-        <div className='filter hidden md:block  h-full bg-white   md:w-[200px] lg:w-[250px] xl:w-[300px] border-r  border transition-all duration-300 ease-linear animate__animated animate__slideInLeft'>
+        <div className='filter hidden md:block  h-full bg-white md:w-[200px] lg:w-[250px] xl:w-[300px] border-r  border transition-all duration-300 ease-linear animate__animated animate__slideInLeft'>
             <div className='w-full h-full ps-0 '>
 
                 <ul className='flex flex-col'>
